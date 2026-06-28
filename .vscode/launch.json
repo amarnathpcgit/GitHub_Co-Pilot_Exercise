@@ -9,8 +9,14 @@
       "type": "debugpy",
       "request": "launch",
       "module": "uvicorn",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
       "args": [
         "src.app:app",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "8001",
         "--reload",
         "--reload-include",
         "src/static/*"
